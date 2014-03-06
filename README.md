@@ -1,0 +1,2 @@
+JavaScriptClass2
+================
