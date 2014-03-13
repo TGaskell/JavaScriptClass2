@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        
+        <style type="text/css">
+            canvas {
+                border: 1px solid black;
+            }
+            </style>
+        
+    </head>
+    <body>
+           
+        <div id="fadeout"> FADEOUT </div>
+        
+        <canvas id="mycanvas" width="750" height="250"></canvas>
+        
+        <script type="text/javascript">
+            
+        var can = document.getElementById('mycanvas');
+        var ctx = can.getContext('2d'); 
+        
+        
+        
+        requestAnimationFrame(fadeColor);
+        
+        var fade = document.getElementById('fadeout');
+        var fadeTime = 0;
+        fade.style.opacity = fadeTime;
+        var timer = setInterval(fadeColor, 100);
+        
+        function fadeColor() {
+                
+              if ( fadeTime < 10 ){
+                  fade.style.opacity = (fadeTime * 0.1);
+                  fadeTime += 1;
+                } else {
+                  clearInterval(timer);
+                }
+          }   
+           
+         function hide(){
+             
+             fade.style.visibility="hidden";
+          }
+         
+         setTimeout(hide, 10000);
+
+            
+            //create rectangle on canvas
+            ctx.fillStyle = "#FF0000";
+            ctx.fillRect(25,25,150,75);
+            
+            //create circle on canvas
+            ctx.beginPath();
+            ctx.arc(250,50,40,0,2*Math.PI);
+            ctx.stroke();
+ 
+            //function to load image onto canvas
+            function make_base()
+            {
+                var image = new Image();
+                image.src = 'eagle.jpg';
+                image.addEventListener("load", function(){ctx.drawImage(image,350,50,50,50);},false);                
+            }
+            
+            window.addEventListener("load",make_base,false);
+ 
+     
+        </script>
+    </body>
+</html>
