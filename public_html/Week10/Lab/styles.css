@@ -1,0 +1,50 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Feb 22, 2014, 4:33:01 PM
+    Author     : Terri
+*/
+
+body {
+    background-color: #E6CCFF;
+    color: #222222;
+}
+
+h1 {
+    color: #2E2933;
+    text-align: center;
+    
+}
+
+.contentBox {
+
+    width: 500px;
+    border: 1px solid #111111;
+    margin: 1em auto;
+    padding: 0.5em;
+    border-radius: 10px;
+    background-color: wheat;
+
+}
+.scrollBoxWrapper {
+    border: 1px solid #999999;
+    margin-top: 0.5em;
+    margin-bottom: 1em;
+    padding-left: 0.5em;
+    background-color: white;
+}
+.scrollBox {
+    height: 150px;
+    overflow: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
